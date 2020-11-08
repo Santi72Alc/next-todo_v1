@@ -22,7 +22,7 @@ const FormTaskAdd = ({ modifyTask }) => {
       <Card.Body>
         <Form>
           <Form.Row className="align-items-center justify-content-center">
-            <Col className="mr-auto">
+            <Col className="mr-auto" lg={12} xl={8}>
               <Form.Control
                 type="text"
                 value={newTask}
@@ -31,8 +31,9 @@ const FormTaskAdd = ({ modifyTask }) => {
               />
             </Col>
 
-            <Col className="my-1">
+            <Col className="mt-2 mt-sm-0">
               <Button
+                block
                 type="submit"
                 variant="primary"
                 onClick={handleSubmit}
