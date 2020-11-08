@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 
 import { getColorByState, getStateText } from "../../config";
 
-export default ({ tasks, handleTask }) => {
+const LinesTasks = ({ tasks, handleTask }) => {
   return (
     <u>
       {tasks.map((task) => (
@@ -85,3 +85,5 @@ const TaskToShow = ({ task, handleTask }) => {
     </Alert>
   );
 };
+
+export default LinesTasks;

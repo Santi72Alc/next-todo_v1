@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 
-export default () => {
+const SearchForm = () => {
   return (
     <Form inline>
       <FormControl
@@ -18,3 +18,5 @@ export default () => {
     </Form>
   );
 };
+
+export default SearchForm;

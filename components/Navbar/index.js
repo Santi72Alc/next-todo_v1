@@ -1,9 +1,11 @@
 import Navbar from "react-bootstrap/Navbar";
 
-export default () => {
+const NavbarTop = () => {
   return (
     <Navbar bg="light">
       <Navbar.Brand>TODO's App</Navbar.Brand>
     </Navbar>
   );
 };
+
+export default NavbarTop;

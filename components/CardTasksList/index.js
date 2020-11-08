@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import LinesTasks from "../LinesTasks";
 import { useEffect } from "react";
 
-export default ({ tasks, modifyTask }) => {
+const CardTaskList = ({ tasks, modifyTask }) => {
   let tasksList = tasks;
 
   const EmptyTasks = () => {
@@ -36,3 +36,5 @@ export default ({ tasks, modifyTask }) => {
     </Card>
   );
 };
+
+export default CardTaskList;
