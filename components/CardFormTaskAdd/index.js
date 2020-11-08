@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-const FormTaskAdd = ({ modifyTask }) => {
+export default ({ modifyTask }) => {
   const [newTask, setNewTask] = useState("");
 
   const handleSubmit = (e) => {
@@ -48,5 +48,3 @@ const FormTaskAdd = ({ modifyTask }) => {
     </Card>
   );
 };
-
-export default FormTaskAdd;

@@ -3,17 +3,30 @@ import { VscClose, VscCheck, VscCircleSlash } from "react-icons/vsc";
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 import { getColorByState, getStateText } from "../../config";
 
-const LineTask = ({ task, handleTask }) => {
-  const { creationDate, text, state } = task;
-  let colorAlert = "dark";
+export default ({ tasks, handleTask }) => {
+  return (
+    <u>
+      {tasks.map((task) => (
+        <TaskToShow
+          as="li"
+          key={task.creationDate}
+          task={task}
+          handleTask={handleTask}
+        />
+      ))}
+    </u>
+  );
+};
 
-  if (task) colorAlert = getColorByState(state);
+const TaskToShow = ({ task, handleTask }) => {
+  const { creationDate, text, state } = task;
+  const colorAlert = getColorByState(state);
 
   // handleTask function
   const handleTaskOption = (e) => {
@@ -35,10 +48,10 @@ const LineTask = ({ task, handleTask }) => {
         <Badge pill variant="dark">
           Created at {dateFormat(creationDate)}
         </Badge>
-        {state !== "PENDIENT" ? " - " + getStateText(state).toUpperCase() : ""}
+        {state !== "PENDIENT" ? " * " + getStateText(state).toUpperCase() : ""}
       </Alert.Heading>
       <Row className="align-items-center">
-        <Col>{" " + text}</Col>
+        <Col>{text}</Col>
         <Col sm={3} md={3} lg={3}>
           <ButtonGroup
             className="float-right "
@@ -72,5 +85,3 @@ const LineTask = ({ task, handleTask }) => {
     </Alert>
   );
 };
-
-export default LineTask;

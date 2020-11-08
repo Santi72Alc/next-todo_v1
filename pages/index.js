@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Navbar from "../components/Navbar";
 
-import TasksList from "../components/TasksList";
-import FormTaskAdd from "../components/FormTaskAdd";
+import TasksList from "../components/CardTasksList";
+import FormTaskAdd from "../components/CardFormTaskAdd";
 import { useTasksState } from "../hooks/tasksState";
 
 function Home() {
